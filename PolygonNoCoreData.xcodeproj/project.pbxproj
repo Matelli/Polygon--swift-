@@ -12,6 +12,8 @@
 		48C1094E193F45FF0029884E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C1094C193F45FF0029884E /* Main.storyboard */; };
 		48C10950193F45FF0029884E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C1094F193F45FF0029884E /* Images.xcassets */; };
 		48C1095C193F46000029884E /* PolygonNoCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1095B193F46000029884E /* PolygonNoCoreDataTests.swift */; };
+		48C10967193F46310029884E /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C10965193F46310029884E /* Polygon.swift */; };
+		48C10968193F46310029884E /* PolygonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C10966193F46310029884E /* PolygonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		48C10955193F45FF0029884E /* PolygonNoCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolygonNoCoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C1095A193F46000029884E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48C1095B193F46000029884E /* PolygonNoCoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonNoCoreDataTests.swift; sourceTree = "<group>"; };
+		48C10965193F46310029884E /* Polygon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
+		48C10966193F46310029884E /* PolygonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolygonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			children = (
 				48C10948193F45FF0029884E /* AppDelegate.swift */,
 				48C1094A193F45FF0029884E /* ViewController.swift */,
+				48C10965193F46310029884E /* Polygon.swift */,
+				48C10966193F46310029884E /* PolygonView.swift */,
 				48C1094C193F45FF0029884E /* Main.storyboard */,
 				48C1094F193F45FF0029884E /* Images.xcassets */,
 				48C10946193F45FF0029884E /* Supporting Files */,
@@ -210,6 +216,8 @@
 			files = (
 				48C1094B193F45FF0029884E /* ViewController.swift in Sources */,
 				48C10949193F45FF0029884E /* AppDelegate.swift in Sources */,
+				48C10967193F46310029884E /* Polygon.swift in Sources */,
+				48C10968193F46310029884E /* PolygonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

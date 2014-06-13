@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6162" systemVersion="14A238h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6160"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PolygonNoCoreData" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +15,53 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSz-dt-8PJ">
+                                <rect key="frame" x="20" y="28" width="440" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="3" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="fln-Pk-3tN">
+                                <rect key="frame" x="18" y="442" width="444" height="31"/>
+                                <connections>
+                                    <action selector="sliderDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="y0a-WI-gQN"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gyb-Ay-LaD" customClass="PolygonView" customModule="PolygonNoCoreData" customModuleProvider="target">
+                                <rect key="frame" x="20" y="86" width="440" height="348"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rU-Vb-h9j">
+                                <rect key="frame" x="20" y="57" width="440" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8rU-Vb-h9j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="A0x-sg-gfM"/>
+                            <constraint firstItem="fln-Pk-3tN" firstAttribute="top" secondItem="Gyb-Ay-LaD" secondAttribute="bottom" constant="8" symbolic="YES" id="BrX-gz-rcP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fln-Pk-3tN" secondAttribute="bottom" constant="20" symbolic="YES" id="E2T-mI-8Pc"/>
+                            <constraint firstItem="8rU-Vb-h9j" firstAttribute="top" secondItem="TSz-dt-8PJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Gwv-1f-k4P"/>
+                            <constraint firstItem="Gyb-Ay-LaD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="OBJ-MS-ZLD"/>
+                            <constraint firstItem="TSz-dt-8PJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="OEj-7M-OGi"/>
+                            <constraint firstAttribute="trailing" secondItem="fln-Pk-3tN" secondAttribute="trailing" constant="20" symbolic="YES" id="bxI-Wv-cfq"/>
+                            <constraint firstItem="fln-Pk-3tN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="f8u-dD-Wfx"/>
+                            <constraint firstAttribute="trailing" secondItem="8rU-Vb-h9j" secondAttribute="trailing" constant="20" symbolic="YES" id="gEG-Fb-DHt"/>
+                            <constraint firstAttribute="trailing" secondItem="Gyb-Ay-LaD" secondAttribute="trailing" constant="20" symbolic="YES" id="oq8-CL-WpS"/>
+                            <constraint firstItem="Gyb-Ay-LaD" firstAttribute="top" secondItem="8rU-Vb-h9j" secondAttribute="bottom" constant="8" symbolic="YES" id="tu9-en-WAW"/>
+                            <constraint firstItem="TSz-dt-8PJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" symbolic="YES" id="xHN-vq-QWr"/>
+                            <constraint firstAttribute="trailing" secondItem="TSz-dt-8PJ" secondAttribute="trailing" constant="20" symbolic="YES" id="xoT-My-Oco"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="8rU-Vb-h9j" id="cEB-Ni-KDo"/>
+                        <outlet property="polygonView" destination="Gyb-Ay-LaD" id="fha-zP-QAy"/>
+                        <outlet property="titleLabel" destination="TSz-dt-8PJ" id="Nsm-7R-IRe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
